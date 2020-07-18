@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+  
+<hibernate-configuration>
+    <session-factory>
+  
+        <!-- Connection settings -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://192.168.43.159:5432/vivero</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">root</property>
+  
+        <!-- SQL dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+  
+        <!-- Print executed SQL to stdout -->
+        <property name="show_sql">true</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+  
+        <!-- Update database on startup 
+        <property name="hibernate.hbm2ddl.auto">update</property>-->
+  
+  		<!-- Annotated entity classes-->
+  		<mapping resource="Persistencia/View/Producto.hbm.xml" />
+  		 <mapping resource="Persistencia/View/TipoProducto.hbm.xml" />
+  		 <mapping resource="Persistencia/View/Riego.hbm.xml" />
+  		 <mapping resource="Persistencia/View/Usuario.hbm.xml" />
+  		 
+        
+    </session-factory>
+</hibernate-configuration>

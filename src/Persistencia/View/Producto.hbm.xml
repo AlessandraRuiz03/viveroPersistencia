@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="Persistencia.View">
+  <class name="Producto" table="Producto">
+   <id name="id"
+            column="id"
+            type="integer"
+            unsaved-value="null" >
+            <generator class="increment">
+            </generator>
+        </id>
+
+<property name="Nombre" column="nombre"/>
+<property name="Condicion" column="condicion" />
+<property name="FechaIngreso" column="fechaingreso" />
+
+<many-to-one name="tipoP" class="TipoProducto" fetch="select">
+            <column name="tipop" not-null="true" />
+    </many-to-one>
+    
+ <bag name="Riegos" table="Riego"
+        inverse="true" lazy="true" fetch="select">
+        <key>
+        <column name="idproducto" not-null="true" />
+        </key>
+        <one-to-many class="Producto" />
+    </bag>
+    
+  </class>
+ 
+</hibernate-mapping>

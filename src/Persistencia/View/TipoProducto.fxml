@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #059675;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Persistencia.View.TipoController">
+   <children>
+      <ImageView fitHeight="584.0" fitWidth="705.0" layoutX="1.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Recursos/Fondo.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="309.0" fitWidth="392.0" layoutX="-9.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Recursos/leaves.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#004a1acc" height="119.0" stroke="BLACK" strokeType="INSIDE" width="706.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#823305cd" height="80.0" layoutX="11.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="213.0" />
+      <Separator layoutX="229.0" orientation="VERTICAL" prefHeight="515.0" prefWidth="19.0" />
+      <TextField fx:id="tipoProducto" alignment="CENTER" layoutX="32.0" layoutY="163.0" prefHeight="28.0" prefWidth="184.0" promptText="Tipo de Producto" />
+      <TextField fx:id="idProductoE" alignment="CENTER" layoutX="14.0" layoutY="296.0" prefHeight="28.0" prefWidth="118.0" promptText="ID Tipo Producto" />
+      <TableView fx:id="TablaDatos" layoutX="297.0" layoutY="77.0" prefHeight="388.0" prefWidth="350.0" style="-fx-background-color: #6EEFF2;">
+        <columns>
+          <TableColumn fx:id="IDProducto" prefWidth="161.0" text="ID Tipo Producto" />
+          <TableColumn fx:id="TipoProducto" prefWidth="189.0" text="Tipo Producto" />
+        </columns>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TableView>
+      <TextField fx:id="tipoProductoAct" alignment="CENTER" layoutX="19.0" layoutY="423.0" prefHeight="28.0" prefWidth="125.0" promptText="Tipo de Producto" />
+      <TextField fx:id="idTipoPAct" alignment="CENTER" layoutX="18.0" layoutY="382.0" prefHeight="28.0" prefWidth="125.0" promptText="ID Tipo Producto" />
+      <Label layoutX="32.0" layoutY="38.0" prefHeight="35.0" prefWidth="184.0" text="Tipo de Producto">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#0f5421" />
+                  <Stop color="#00d9ff" offset="0.007662835249042145" />
+                  <Stop color="#128321" offset="0.9923371647509578" />
+                  <Stop color="#021704" offset="0.9961685823754789" />
+                  <Stop color="#012c05" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Button fx:id="registrar" layoutX="81.0" layoutY="209.0" mnemonicParsing="false" onAction="#Registro" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #00ff00;" text="Registrar">
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Button fx:id="eliminar" layoutX="152.0" layoutY="296.0" mnemonicParsing="false" onAction="#ClickEliminar" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #ff0000;" text="Eliminar" textFill="#fffdfd">
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Button fx:id="actualizar" layoutX="152.0" layoutY="398.0" mnemonicParsing="false" onAction="#ClickActualizar" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #fffb00;" text="Actualizar">
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Button fx:id="mostrarDatos" layoutX="265.0" layoutY="478.0" mnemonicParsing="false" onAction="#ClickMostrarDatos" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #00a2ff;" text="Ver Datos">
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Button fx:id="RegresarTP" layoutX="608.0" layoutY="480.0" mnemonicParsing="false" onAction="#ClickRegresarTP" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #fc9007;" text="Regresar">
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <ImageView fitHeight="63.0" fitWidth="54.0" layoutX="185.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Recursos/forest.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="353.0" layoutY="20.0" prefHeight="50.0" prefWidth="238.0" text="Green Nursery">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#0f5421" />
+                  <Stop color="#00d9ff" offset="0.007662835249042145" />
+                  <Stop color="#128321" offset="0.9923371647509578" />
+                  <Stop color="#021704" offset="0.9961685823754789" />
+                  <Stop color="#012c05" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold Italic" size="34.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="93.0" layoutY="127.0" text="Registro*">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#801116" />
+                  <Stop color="#460845" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="76.0" layoutY="347.0" text="Actualizar*">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#801116" />
+                  <Stop color="#460845" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="93.0" layoutY="259.0" text="Eliminar*">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#801116" />
+                  <Stop color="#460845" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+   </children>
+</AnchorPane>
